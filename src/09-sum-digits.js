@@ -11,11 +11,11 @@
  *
  */
 function getSumOfDigits(n) {
-  let result = n;
-  while (result >= 10) {
-    result = `${result}`.split('').reduce((a, sum) => +sum + (+a), 0);
+  let res = n;
+  while (res >= 10) {
+    res = `${res}`.split('').reduce((a, sum) => +sum + (+a), 0);
   }
-  return result;
+  return res;
 }
 
 module.exports = getSumOfDigits;

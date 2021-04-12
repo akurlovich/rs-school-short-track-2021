@@ -14,13 +14,13 @@
 function findIndex(array, value) {
   let first = 0;
   let last = array.length - 1;
-  let position = -1;
+  let pos = -1;
   let found = false;
   let middle;
   while (found === false && first <= last) {
     middle = Math.floor((first + last) / 2);
     if (array[middle] === value) {
-      position = middle;
+      pos = middle;
       found = true;
     } else if (array[middle] > value) {
       last = middle - 1;
@@ -28,7 +28,7 @@ function findIndex(array, value) {
       first = middle + 1;
     }
   }
-  return position;
+  return pos;
 }
 
 module.exports = findIndex;
